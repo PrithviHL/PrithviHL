@@ -36,8 +36,8 @@ I build production-minded AI systems — retrieval and LLM applications, evaluat
 
 ## 💼 Experience
 
-- **Machine Learning Engineer Intern** — Aventusoft Inc. · Aug 2025 – May 2026
-- **Quality Assurance Test Engineer** — Huron Consulting Group · Jun 2023 – Jun 2024
+- **AI/ML Engineer Intern** — Aventusoft Inc. · Aug 2025 – May 2026
+- **Software Engineer in Test** — Huron Consulting Group · Jun 2023 – Jun 2024
 - **Machine Learning Engineer** — YBI Foundation, Delhi · May 2022 – Jun 2023
 
 ## 🎓 Education
