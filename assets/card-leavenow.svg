@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="250" viewBox="0 0 480 250" role="img" aria-label="LeaveNow: Bus trip planner for Rochester RTS: live and scheduled times, journeys with one transfer.">
+<title>LeaveNow: Bus trip planner for Rochester RTS: live and scheduled times, journeys with one transfer.</title>
+
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#121a31"/><stop offset="1" stop-color="#0b1020"/></linearGradient>
+  <radialGradient id="hl" cx="0.92" cy="0.05" r="0.7"><stop offset="0" stop-color="#ff9f43" stop-opacity="0.28"/><stop offset="1" stop-color="#ff9f43" stop-opacity="0"/></radialGradient>
+  <linearGradient id="edge" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9f43" stop-opacity="0.7"/><stop offset="0.5" stop-color="#ffffff" stop-opacity="0.06"/><stop offset="1" stop-color="#ff6b6b" stop-opacity="0.6"/></linearGradient>
+</defs>
+<rect width="480" height="250" rx="18" fill="url(#bg)"/>
+<rect width="480" height="250" rx="18" fill="url(#hl)"/>
+<rect x="0.75" y="0.75" width="478.5" height="248.5" rx="17.5" fill="none" stroke="url(#edge)" stroke-width="1.5"/>
+<g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <rect x="28" y="28" width="6" height="34" rx="3" fill="#ff9f43"/>
+  <text x="46" y="55" font-size="24" font-weight="800" letter-spacing="-0.4" fill="#f2f4fa">LeaveNow</text>
+  <g transform="translate(346 30)">
+    <rect width="106" height="26" rx="13" fill="#ff9f43" fill-opacity="0.14" stroke="#ff9f43" stroke-opacity="0.45"/>
+    <circle cx="14" cy="13" r="4" fill="#ff9f43"><animate attributeName="opacity" values="1;0.3;1" dur="1.6s" repeatCount="indefinite"/></circle>
+    <text x="24" y="17.5" font-size="11.5" font-weight="700" letter-spacing="1" fill="#f2f4fa">LIVE DEMO</text>
+  </g>
+  <text x="28" y="108" font-size="14.5" fill="#c4c9d8">Bus trip planner for Rochester</text><text x="28" y="130" font-size="14.5" fill="#c4c9d8">RTS: live and scheduled times,</text><text x="28" y="152" font-size="14.5" fill="#c4c9d8">journeys with one transfer.</text>
+  <rect x="28" y="196" width="66" height="28" rx="14" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.12"/><text x="61" y="214.5" text-anchor="middle" font-size="12.5" font-weight="600" fill="#c4c9d8">Python</text><rect x="102" y="196" width="89" height="28" rx="14" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.12"/><text x="147" y="214.5" text-anchor="middle" font-size="12.5" font-weight="600" fill="#c4c9d8">Streamlit</text><rect x="199" y="196" width="52" height="28" rx="14" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.12"/><text x="225" y="214.5" text-anchor="middle" font-size="12.5" font-weight="600" fill="#c4c9d8">GTFS</text><rect x="259" y="196" width="66" height="28" rx="14" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.12"/><text x="292" y="214.5" text-anchor="middle" font-size="12.5" font-weight="600" fill="#c4c9d8">Docker</text>
+</g>
+<g opacity="0.95"><path d="M330 145 C360 145 360 90 395 90 S430 140 458 120" fill="none" stroke="#ff9f43" stroke-opacity="0.35" stroke-width="7" stroke-linecap="round"/><path d="M330 145 C360 145 360 90 395 90 S430 140 458 120" fill="none" stroke="#ff9f43" stroke-width="2.5" stroke-dasharray="2 7" stroke-linecap="round"/><circle cx="330" cy="145" r="6" fill="#0b1020" stroke="#ff9f43" stroke-width="2.5"/><circle cx="395" cy="90" r="6" fill="#0b1020" stroke="#ff9f43" stroke-width="2.5"/><circle cx="458" cy="120" r="6" fill="#0b1020" stroke="#ff9f43" stroke-width="2.5"/><g><rect x="-9" y="-6" width="18" height="12" rx="3" fill="#ff6b6b"/><animateMotion dur="4.5s" repeatCount="indefinite" rotate="auto" path="M330 145 C360 145 360 90 395 90 S430 140 458 120"/></g></g>
+</svg>
