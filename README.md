@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/header.svg" alt="Prithvi Halagere Lokesha: AI/ML Engineer, LLM systems and medical AI. M.S. Artificial Intelligence Systems, University of Florida. Open to full-time roles." width="100%">
+  <img src="assets/header.svg" alt="Prithvi: AI/ML Engineer, LLM systems and medical AI. M.S. Artificial Intelligence Systems, University of Florida. Open to full-time roles." width="100%">
 </p>
 
 <p align="center">

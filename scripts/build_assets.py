@@ -20,7 +20,7 @@ OUT = Path(__file__).resolve().parent.parent / "assets"
 # DATA: edit me
 # ---------------------------------------------------------------------------
 
-NAME = "Prithvi Halagere Lokesha"
+NAME = "Prithvi"
 TAGLINE = "AI/ML Engineer  ·  LLM Systems  ·  Medical AI"
 SUBLINE = "M.S. Artificial Intelligence Systems  ·  University of Florida"
 STATUS = "OPEN TO FULL-TIME ROLES"
@@ -174,10 +174,10 @@ def header() -> str:
     </circle>
     <text x="94" y="68" font-size="13" font-weight="700" letter-spacing="1.4" fill="#7ff0c4">{escape(STATUS)}</text>
 
-    <text x="60" y="128" font-size="22" fill="{INK_2}">Hi, I'm</text>
-    <text x="58" y="186" font-size="54" font-weight="800" letter-spacing="-1.2" fill="url(#name)">{escape(NAME)}</text>
-    <text x="60" y="226" font-size="22" font-weight="600" fill="{INK}">{escape(TAGLINE)}</text>
-    <text x="60" y="256" font-size="16" fill="{INK_3}">{escape(SUBLINE)}</text>
+    <text x="60" y="116" font-size="22" fill="{INK_2}">Hi, I'm</text>
+    <text x="56" y="192" font-size="78" font-weight="800" letter-spacing="-2" fill="url(#name)">{escape(NAME)}</text>
+    <text x="60" y="230" font-size="22" font-weight="600" fill="{INK}">{escape(TAGLINE)}</text>
+    <text x="60" y="260" font-size="16" fill="{INK_3}">{escape(SUBLINE)}</text>
 
     <g transform="translate(800 44)">
       <rect width="340" height="206" rx="14" fill="#05080f" fill-opacity="0.72" stroke="#ffffff" stroke-opacity="0.1"/>

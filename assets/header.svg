@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-label="Prithvi Halagere Lokesha: AI/ML Engineer  ·  LLM Systems  ·  Medical AI">
-<title>Prithvi Halagere Lokesha: AI/ML Engineer  ·  LLM Systems  ·  Medical AI</title>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-label="Prithvi: AI/ML Engineer  ·  LLM Systems  ·  Medical AI">
+<title>Prithvi: AI/ML Engineer  ·  LLM Systems  ·  Medical AI</title>
 
 <defs>
   <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
@@ -31,10 +31,10 @@
     </circle>
     <text x="94" y="68" font-size="13" font-weight="700" letter-spacing="1.4" fill="#7ff0c4">OPEN TO FULL-TIME ROLES</text>
 
-    <text x="60" y="128" font-size="22" fill="#c4c9d8">Hi, I'm</text>
-    <text x="58" y="186" font-size="54" font-weight="800" letter-spacing="-1.2" fill="url(#name)">Prithvi Halagere Lokesha</text>
-    <text x="60" y="226" font-size="22" font-weight="600" fill="#f2f4fa">AI/ML Engineer  ·  LLM Systems  ·  Medical AI</text>
-    <text x="60" y="256" font-size="16" fill="#8a92a8">M.S. Artificial Intelligence Systems  ·  University of Florida</text>
+    <text x="60" y="116" font-size="22" fill="#c4c9d8">Hi, I'm</text>
+    <text x="56" y="192" font-size="78" font-weight="800" letter-spacing="-2" fill="url(#name)">Prithvi</text>
+    <text x="60" y="230" font-size="22" font-weight="600" fill="#f2f4fa">AI/ML Engineer  ·  LLM Systems  ·  Medical AI</text>
+    <text x="60" y="260" font-size="16" fill="#8a92a8">M.S. Artificial Intelligence Systems  ·  University of Florida</text>
 
     <g transform="translate(800 44)">
       <rect width="340" height="206" rx="14" fill="#05080f" fill-opacity="0.72" stroke="#ffffff" stroke-opacity="0.1"/>
