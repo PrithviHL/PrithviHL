@@ -36,8 +36,8 @@ CARDS = [
     {
         "file": "card-spanscope.svg",
         "title": "Spanscope",
-        "lines": ["Live LLM observability: latency,", "errors and cost per model from", "OpenTelemetry traces."],
-        "chips": ["TypeScript", "Hono", "ClickHouse", "OpenTelemetry"],
+        "lines": ["Live LLM observability from", "OpenTelemetry: 52,700 spans/s", "into ClickHouse, 0 dropped."],
+        "chips": ["TypeScript", "ClickHouse", "OpenTelemetry", "Python"],
         "pill": "LIVE DEMO",
         "accent": "#4c8dff",
         "accent2": "#9085e9",
@@ -66,8 +66,8 @@ CARDS = [
     {
         "file": "card-tinyml.svg",
         "title": "SayWatt",
-        "lines": ["Say it, it switches: offline voice", "commands for the home on a $5", "ESP32. No internet needed."],
-        "chips": ["C++", "TinyML", "Edge Impulse", "ESP32"],
+        "lines": ["Offline voice control on a $5", "ESP32: 28 classes, 92% precise", "when it acts. No internet."],
+        "chips": ["C++", "Edge Impulse", "ESP32", "WebAssembly"],
         "pill": "LIVE DEMO",
         "accent": "#ff5c8a",
         "accent2": "#9085e9",

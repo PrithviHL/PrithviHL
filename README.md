@@ -40,11 +40,11 @@
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <a href="https://spanscope-llm-observability-dashboard.onrender.com/"><img src="assets/card-spanscope.svg" alt="Spanscope: live LLM observability with latency, errors and cost per model from OpenTelemetry traces" width="100%"></a>
+      <a href="https://spanscope-llm-observability-dashboard.onrender.com/"><img src="assets/card-spanscope.svg" alt="Spanscope: live LLM observability from OpenTelemetry traces, load-tested at 52,700 spans per second into ClickHouse with none dropped" width="100%"></a>
       <p align="center"><a href="https://spanscope-llm-observability-dashboard.onrender.com/"><b>▶ Live demo</b></a> · <a href="https://github.com/PrithviHL/Spanscope-LLM-observability-dashboard">Code</a></p>
     </td>
     <td width="50%" valign="top">
-      <a href="https://prithvihl.github.io/voice/"><img src="assets/card-tinyml.svg" alt="SayWatt: offline voice commands for the home on an ESP32, no internet needed" width="100%"></a>
+      <a href="https://prithvihl.github.io/voice/"><img src="assets/card-tinyml.svg" alt="SayWatt: offline voice control on a 5 dollar ESP32, 28 classes, 92 percent precise when it acts, no internet needed" width="100%"></a>
       <p align="center"><a href="https://prithvihl.github.io/voice/"><b>▶ Live demo</b></a> · <a href="https://drive.google.com/drive/folders/1DJyjVCoRY8r977VBq4hr7fjYT17MtLwN?usp=sharing">Video</a> · <a href="https://github.com/PrithviHL/SayWatt-Real-Time-Voice-Command-Recognition-on-ESP32">Code</a></p>
     </td>
   </tr>
