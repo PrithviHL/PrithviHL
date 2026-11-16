@@ -68,7 +68,7 @@ CARDS = [
         "title": "TinyML Voice on ESP32",
         "lines": ["On-device voice command", "recognition on a microcontroller,", "with a live OLED readout."],
         "chips": ["C++", "TinyML", "Edge Impulse", "ESP32"],
-        "pill": "EDGE AI",
+        "pill": "LIVE DEMO",
         "accent": "#ff5c8a",
         "accent2": "#9085e9",
         "art": "wave",
@@ -194,7 +194,7 @@ def header() -> str:
         <text x="22" y="62" fill="{INK_3}">{{</text>
         <text x="40" y="88"><tspan fill="#7fb2ff">"role"</tspan><tspan fill="{INK_3}">: </tspan><tspan fill="#7ff0c4">"AI/ML Engineer"</tspan><tspan fill="{INK_3}">,</tspan></text>
         <text x="40" y="112"><tspan fill="#7fb2ff">"focus"</tspan><tspan fill="{INK_3}">: [</tspan><tspan fill="#7ff0c4">"LLMs"</tspan><tspan fill="{INK_3}">, </tspan><tspan fill="#7ff0c4">"Med AI"</tspan><tspan fill="{INK_3}">],</tspan></text>
-        <text x="40" y="136"><tspan fill="#7fb2ff">"live_apps"</tspan><tspan fill="{INK_3}">: </tspan><tspan fill="#ffb86b">3</tspan><tspan fill="{INK_3}">,</tspan></text>
+        <text x="40" y="136"><tspan fill="#7fb2ff">"live_apps"</tspan><tspan fill="{INK_3}">: </tspan><tspan fill="#ffb86b">4</tspan><tspan fill="{INK_3}">,</tspan></text>
         <text x="40" y="160"><tspan fill="#7fb2ff">"open_to_work"</tspan><tspan fill="{INK_3}">: </tspan><tspan fill="#b9a8ff">true</tspan></text>
         <text x="22" y="184" fill="{INK_3}">}}</text>
         <rect x="36" y="171" width="9" height="17" fill="#7ff0c4"><animate attributeName="opacity" values="1;0;1" dur="1.1s" calcMode="discrete" repeatCount="indefinite"/></rect>

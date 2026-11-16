@@ -12,10 +12,10 @@
 <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
   <rect x="28" y="28" width="6" height="34" rx="3" fill="#ff5c8a"/>
   <text x="46" y="55" font-size="21" font-weight="800" letter-spacing="-0.4" fill="#f2f4fa">TinyML Voice on ESP32</text>
-  <g transform="translate(362 30)">
-    <rect width="90" height="26" rx="13" fill="#ff5c8a" fill-opacity="0.14" stroke="#ff5c8a" stroke-opacity="0.45"/>
+  <g transform="translate(346 30)">
+    <rect width="106" height="26" rx="13" fill="#ff5c8a" fill-opacity="0.14" stroke="#ff5c8a" stroke-opacity="0.45"/>
     <circle cx="14" cy="13" r="4" fill="#ff5c8a"><animate attributeName="opacity" values="1;0.3;1" dur="1.6s" repeatCount="indefinite"/></circle>
-    <text x="24" y="17.5" font-size="11.5" font-weight="700" letter-spacing="1" fill="#f2f4fa">EDGE AI</text>
+    <text x="24" y="17.5" font-size="11.5" font-weight="700" letter-spacing="1" fill="#f2f4fa">LIVE DEMO</text>
   </g>
   <text x="28" y="108" font-size="14.5" fill="#c4c9d8">On-device voice command</text><text x="28" y="130" font-size="14.5" fill="#c4c9d8">recognition on a microcontroller,</text><text x="28" y="152" font-size="14.5" fill="#c4c9d8">with a live OLED readout.</text>
   <rect x="28" y="196" width="44" height="28" rx="14" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.12"/><text x="50" y="214.5" text-anchor="middle" font-size="12.5" font-weight="600" fill="#c4c9d8">C++</text><rect x="80" y="196" width="66" height="28" rx="14" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.12"/><text x="113" y="214.5" text-anchor="middle" font-size="12.5" font-weight="600" fill="#c4c9d8">TinyML</text><rect x="155" y="196" width="111" height="28" rx="14" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.12"/><text x="210" y="214.5" text-anchor="middle" font-size="12.5" font-weight="600" fill="#c4c9d8">Edge Impulse</text><rect x="273" y="196" width="59" height="28" rx="14" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.12"/><text x="303" y="214.5" text-anchor="middle" font-size="12.5" font-weight="600" fill="#c4c9d8">ESP32</text>

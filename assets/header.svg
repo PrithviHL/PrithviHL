@@ -51,7 +51,7 @@
         <text x="22" y="62" fill="#8a92a8">{</text>
         <text x="40" y="88"><tspan fill="#7fb2ff">"role"</tspan><tspan fill="#8a92a8">: </tspan><tspan fill="#7ff0c4">"AI/ML Engineer"</tspan><tspan fill="#8a92a8">,</tspan></text>
         <text x="40" y="112"><tspan fill="#7fb2ff">"focus"</tspan><tspan fill="#8a92a8">: [</tspan><tspan fill="#7ff0c4">"LLMs"</tspan><tspan fill="#8a92a8">, </tspan><tspan fill="#7ff0c4">"Med AI"</tspan><tspan fill="#8a92a8">],</tspan></text>
-        <text x="40" y="136"><tspan fill="#7fb2ff">"live_apps"</tspan><tspan fill="#8a92a8">: </tspan><tspan fill="#ffb86b">3</tspan><tspan fill="#8a92a8">,</tspan></text>
+        <text x="40" y="136"><tspan fill="#7fb2ff">"live_apps"</tspan><tspan fill="#8a92a8">: </tspan><tspan fill="#ffb86b">4</tspan><tspan fill="#8a92a8">,</tspan></text>
         <text x="40" y="160"><tspan fill="#7fb2ff">"open_to_work"</tspan><tspan fill="#8a92a8">: </tspan><tspan fill="#b9a8ff">true</tspan></text>
         <text x="22" y="184" fill="#8a92a8">}</text>
         <rect x="36" y="171" width="9" height="17" fill="#7ff0c4"><animate attributeName="opacity" values="1;0;1" dur="1.1s" calcMode="discrete" repeatCount="indefinite"/></rect>
