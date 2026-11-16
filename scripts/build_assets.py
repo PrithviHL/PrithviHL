@@ -65,8 +65,8 @@ CARDS = [
     },
     {
         "file": "card-tinyml.svg",
-        "title": "TinyML Voice on ESP32",
-        "lines": ["On-device voice command", "recognition on a microcontroller,", "with a live OLED readout."],
+        "title": "SayWatt",
+        "lines": ["Say it, it switches: offline voice", "commands for the home on a $5", "ESP32. No internet needed."],
         "chips": ["C++", "TinyML", "Edge Impulse", "ESP32"],
         "pill": "LIVE DEMO",
         "accent": "#ff5c8a",
