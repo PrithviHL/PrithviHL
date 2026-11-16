@@ -23,21 +23,15 @@
 
 ## ⚡ About me
 
-I build production-minded AI systems: retrieval and LLM applications, evaluation and observability tooling, and deep learning for medical signals and images.
-
-- 🫀 **Most recently:** Machine Learning Engineer Intern at **Aventusoft** (Aug 2025 – May 2026), shipping ECG deep learning models for arrhythmia classification and PQRST fiducial detection (1D U-Net, CNN-LSTM and a transformer-based ECG foundation model), exported to TensorFlow Lite and deployed on AWS SageMaker
-- 🛠️ **Now building:** LLM observability ([Spanscope](https://spanscope-llm-observability-dashboard.onrender.com/)), RAG over codebases ([CodeAtlas](https://codeatlas-rag.onrender.com)), and reward/preference-model evaluation
-- 🌱 **Learning:** LLM inference and serving, Model Context Protocol (MCP), and event-driven systems at scale
-- 💬 **Ask me about:** ECG signal processing, medical imaging, RAG and search ranking, LLM evaluation, PyTorch/TensorFlow optimization, deploying models to cloud and edge
-- ⚡ **Fun fact:** I went from automating 120+ Salesforce test workflows as a QA engineer to building AI that detects heart conditions with 94% accuracy. Turns out debugging humans is harder than debugging code 🫀
+<img src="assets/about.svg" alt="About me. I build production-minded AI systems: LLM and retrieval apps, evaluation and observability tools, and deep learning for medical signals. Most recently: ML Engineer Intern at Aventusoft (2025–26), ECG deep learning for arrhythmia classification and PQRST detection, shipped to TensorFlow Lite and AWS SageMaker. Now building: LLM observability (Spanscope), RAG over codebases (CodeAtlas), offline voice control (SayWatt) and reward-model evaluation. Learning: LLM inference and serving, Model Context Protocol, event-driven systems. Ask me about: ECG signals, medical imaging, RAG and search, LLM evaluation, deploying models to cloud and edge. Fun fact: from automating 120+ Salesforce test workflows to AI that detects heart conditions with 94% accuracy." width="100%">
 
 ## 🚀 Featured projects
 
 <table>
   <tr>
     <td width="50%" valign="top">
-      <a href="https://spanscope-llm-observability-dashboard.onrender.com/"><img src="assets/card-spanscope.svg" alt="Spanscope: live LLM observability with latency, errors and cost per model from OpenTelemetry traces" width="100%"></a>
-      <p align="center"><a href="https://spanscope-llm-observability-dashboard.onrender.com/"><b>▶ Live demo</b></a> · <a href="https://github.com/PrithviHL/Spanscope-LLM-observability-dashboard">Code</a></p>
+      <a href="https://leavenow-prithvihl.onrender.com"><img src="assets/card-leavenow.svg" alt="LeaveNow: bus trip planner for Rochester RTS with live and scheduled times and one-transfer journeys" width="100%"></a>
+      <p align="center"><a href="https://leavenow-prithvihl.onrender.com"><b>▶ Live demo</b></a> · <a href="https://github.com/PrithviHL/LeaveNow-Real-Time-Bus-Location-Tracking-and-Smart-Departure-Prediction">Code</a></p>
     </td>
     <td width="50%" valign="top">
       <a href="https://codeatlas-rag.onrender.com"><img src="assets/card-codeatlas.svg" alt="CodeAtlas: ask questions about any public GitHub repo, with answers citing commit-pinned source" width="100%"></a>
@@ -46,8 +40,8 @@ I build production-minded AI systems: retrieval and LLM applications, evaluation
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <a href="https://leavenow-prithvihl.onrender.com"><img src="assets/card-leavenow.svg" alt="LeaveNow: bus trip planner for Rochester RTS with live and scheduled times and one-transfer journeys" width="100%"></a>
-      <p align="center"><a href="https://leavenow-prithvihl.onrender.com"><b>▶ Live demo</b></a> · <a href="https://github.com/PrithviHL/LeaveNow-Real-Time-Bus-Location-Tracking-and-Smart-Departure-Prediction">Code</a></p>
+      <a href="https://spanscope-llm-observability-dashboard.onrender.com/"><img src="assets/card-spanscope.svg" alt="Spanscope: live LLM observability with latency, errors and cost per model from OpenTelemetry traces" width="100%"></a>
+      <p align="center"><a href="https://spanscope-llm-observability-dashboard.onrender.com/"><b>▶ Live demo</b></a> · <a href="https://github.com/PrithviHL/Spanscope-LLM-observability-dashboard">Code</a></p>
     </td>
     <td width="50%" valign="top">
       <a href="https://prithvihl.github.io/voice/"><img src="assets/card-tinyml.svg" alt="SayWatt: offline voice commands for the home on an ESP32, no internet needed" width="100%"></a>

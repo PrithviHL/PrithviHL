@@ -41,7 +41,7 @@ CARDS = [
         "pill": "LIVE DEMO",
         "accent": "#4c8dff",
         "accent2": "#9085e9",
-        "art": "bars",
+        "art": "iso_bars",
     },
     {
         "file": "card-codeatlas.svg",
@@ -51,7 +51,7 @@ CARDS = [
         "pill": "LIVE DEMO",
         "accent": "#19c48a",
         "accent2": "#4c8dff",
-        "art": "graph",
+        "art": "graph3d",
     },
     {
         "file": "card-leavenow.svg",
@@ -61,7 +61,7 @@ CARDS = [
         "pill": "LIVE DEMO",
         "accent": "#ff9f43",
         "accent2": "#ff6b6b",
-        "art": "route",
+        "art": "iso_route",
     },
     {
         "file": "card-tinyml.svg",
@@ -71,7 +71,7 @@ CARDS = [
         "pill": "LIVE DEMO",
         "accent": "#ff5c8a",
         "accent2": "#9085e9",
-        "art": "wave",
+        "art": "ring3d",
     },
 ]
 
@@ -133,8 +133,122 @@ def glow_filter(fid: str, std: float = 4) -> str:
 
 
 # ---------------------------------------------------------------------------
+# 3D: rotate real 3D points, project with perspective, shade by depth, and bake
+# the result into SMIL keyframes (GitHub READMEs can't run JavaScript).
+# ---------------------------------------------------------------------------
+
+import math
+import random as _random
+
+
+def _project(x, y, z, angle, tilt):
+    """Rotate around Y by angle, tilt around X, then perspective-project."""
+    ca, sa = math.cos(angle), math.sin(angle)
+    x1, z1 = x * ca + z * sa, -x * sa + z * ca
+    ct, st = math.cos(tilt), math.sin(tilt)
+    y1, z2 = y * ct - z1 * st, y * st + z1 * ct
+    p = 3.2 / (3.2 + z2)  # z2 > 0 is farther away
+    return x1 * p, y1 * p, z2
+
+
+def _vals(xs, fmt="{:.1f}"):
+    return ";".join(fmt.format(v) for v in xs)
+
+
+def spin_cloud(points, cx, cy, scale, color, dur=14, frames=30, tilt=0.38,
+               rmin=0.8, rmax=2.8, color2=None, phase=0.0, sway=None):
+    """Animated rotating point cloud. points: list of (x, y, z) in about [-1, 1].
+    sway: if set, rock back and forth by this many radians instead of a full spin."""
+    out = []
+    for i, (x, y, z) in enumerate(points):
+        xs, ys, rs, os_ = [], [], [], []
+        for f in range(frames + 1):
+            a = (sway * math.sin(2 * math.pi * f / frames) if sway else 2 * math.pi * f / frames) + phase
+            px, py, pz = _project(x, y, z, a, tilt)
+            near = max(0.0, min(1.0, (1 - pz) / 2))  # 1 = nearest
+            xs.append(cx + px * scale)
+            ys.append(cy + py * scale)
+            rs.append(rmin + (rmax - rmin) * near)
+            os_.append(0.18 + 0.82 * near)
+        col = color2 if (color2 and i % 3 == 0) else color
+        out.append(
+            f'<circle fill="{col}">'
+            f'<animate attributeName="cx" values="{_vals(xs)}" dur="{dur}s" repeatCount="indefinite"/>'
+            f'<animate attributeName="cy" values="{_vals(ys)}" dur="{dur}s" repeatCount="indefinite"/>'
+            f'<animate attributeName="r" values="{_vals(rs, "{:.2f}")}" dur="{dur}s" repeatCount="indefinite"/>'
+            f'<animate attributeName="opacity" values="{_vals(os_, "{:.2f}")}" dur="{dur}s" repeatCount="indefinite"/>'
+            "</circle>"
+        )
+    return "".join(out)
+
+
+def spin_edges(points, edges, cx, cy, scale, color, dur=14, frames=30, tilt=0.38, width=1.2):
+    out = []
+    for i, j in edges:
+        cols = {k: [] for k in ("x1", "y1", "x2", "y2", "o")}
+        for f in range(frames + 1):
+            a = 2 * math.pi * f / frames
+            ax, ay, az = _project(*points[i], a, tilt)
+            bx, by, bz = _project(*points[j], a, tilt)
+            cols["x1"].append(cx + ax * scale)
+            cols["y1"].append(cy + ay * scale)
+            cols["x2"].append(cx + bx * scale)
+            cols["y2"].append(cy + by * scale)
+            cols["o"].append(0.12 + 0.5 * max(0.0, min(1.0, (1 - (az + bz) / 2) / 2)))
+        anim = "".join(
+            f'<animate attributeName="{"opacity" if k == "o" else k}" values="{_vals(v, "{:.2f}" if k == "o" else "{:.1f}")}" dur="{dur}s" repeatCount="indefinite"/>'
+            for k, v in cols.items()
+        )
+        out.append(f'<line stroke="{color}" stroke-width="{width}">{anim}</line>')
+    return "".join(out)
+
+
+def sphere_points(n, seed=1, inner=0.25):
+    rnd = _random.Random(seed)
+    pts = []
+    for i in range(n):
+        yy = 1 - (i / (n - 1)) * 2
+        r = math.sqrt(1 - yy * yy)
+        th = i * 2.399963229728653
+        k = 1.0 if rnd.random() > inner else rnd.uniform(0.35, 0.85)
+        pts.append((math.cos(th) * r * k, yy * k, math.sin(th) * r * k))
+    return pts
+
+
+def heart_points(n, seed=2):
+    rnd = _random.Random(seed)
+    pts = []
+    for _ in range(n):
+        t = rnd.uniform(0, 2 * math.pi)
+        k = math.sqrt(rnd.random()) if rnd.random() < 0.55 else 1.0
+        x = 16 * math.sin(t) ** 3
+        y = 13 * math.cos(t) - 5 * math.cos(2 * t) - 2 * math.cos(3 * t) - math.cos(4 * t)
+        z = 9 * math.sqrt(max(0.0, 1 - k * k)) * rnd.uniform(-1, 1)
+        pts.append((x * k / 17, -(y * k + 2) / 17, z / 17))
+    return pts
+
+
+def torus_points(n, R=0.8, r=0.22, seed=3):
+    rnd = _random.Random(seed)
+    pts = []
+    for i in range(n):
+        u = 2 * math.pi * i / n
+        v = rnd.uniform(0, 2 * math.pi)
+        pts.append(((R + r * math.cos(v)) * math.cos(u), r * math.sin(v), (R + r * math.cos(v)) * math.sin(u)))
+    return pts
+
+
+def iso(x, y, z=0.0, ox=0.0, oy=0.0, s=1.0):
+    """Isometric projection of a ground-plane point (x, y) at height z."""
+    return ox + (x - y) * 0.866 * s, oy + (x + y) * 0.5 * s - z * s
+
+
+# ---------------------------------------------------------------------------
 # header
 # ---------------------------------------------------------------------------
+
+
+SPHERE_CX = 650
 
 
 def header() -> str:
@@ -159,6 +273,7 @@ def header() -> str:
     <animateTransform attributeName="gradientTransform" type="translate" values="-0.3 0;0.3 0;-0.3 0" dur="10s" repeatCount="indefinite"/>
   </linearGradient>
   {glow_filter("ecgGlow", 3)}
+  <radialGradient id="sphereGlow"><stop offset="0" stop-color="#4c8dff" stop-opacity="0.28"/><stop offset="1" stop-color="#4c8dff" stop-opacity="0"/></radialGradient>
   <clipPath id="frame"><rect width="{w}" height="{h}" rx="22"/></clipPath>
 </defs>
 <g clip-path="url(#frame)">
@@ -179,6 +294,10 @@ def header() -> str:
     <text x="60" y="230" font-size="22" font-weight="600" fill="{INK}">{escape(TAGLINE)}</text>
     <text x="60" y="260" font-size="16" fill="{INK_3}">{escape(SUBLINE)}</text>
 
+    <g aria-hidden="true">
+      <circle cx="{SPHERE_CX}" cy="150" r="98" fill="url(#sphereGlow)"/>
+      {spin_cloud(sphere_points(130), SPHERE_CX, 150, 82, "#7fb2ff", color2="#7fe8c4", dur=16)}
+    </g>
     <g transform="translate(800 44)">
       <rect width="340" height="206" rx="14" fill="#05080f" fill-opacity="0.72" stroke="#ffffff" stroke-opacity="0.1"/>
       <rect width="340" height="34" rx="14" fill="#ffffff" fill-opacity="0.04"/>
@@ -258,6 +377,70 @@ def typing() -> str:
 
 def card_art(kind: str, a: str, b: str) -> str:
     ox, oy = 330, 70  # art area origin (130 x 90)
+    if kind == "graph3d":
+        rnd = _random.Random(11)
+        nodes = [(rnd.uniform(-1, 1), rnd.uniform(-0.8, 0.8), rnd.uniform(-1, 1)) for _ in range(13)]
+        edges = []
+        for i, p in enumerate(nodes):  # connect each node to its two nearest neighbours
+            near = sorted(range(len(nodes)), key=lambda j: sum((p[k] - nodes[j][k]) ** 2 for k in range(3)))[1:3]
+            edges += [(i, j) for j in near if (j, i) not in edges]
+        return spin_edges(nodes, edges, 398, 118, 50, a, dur=12) + spin_cloud(
+            nodes, 398, 118, 50, a, color2=b, dur=12, rmin=2.2, rmax=5.5)
+    if kind == "ring3d":
+        return (
+            f'<circle cx="398" cy="118" r="10" fill="{b}" opacity="0.85">'
+            f'<animate attributeName="r" values="8;13;8;8" dur="0.9s" repeatCount="indefinite"/></circle>'
+            + spin_cloud(torus_points(96), 398, 118, 62, a, color2=b, dur=9, tilt=1.0, rmin=0.9, rmax=2.6)
+        )
+    if kind == "iso_bars":
+        out = []
+        heights = [[16, 22, 18, 26], [20, 28, 24, 46], [14, 18, 32, 22]]
+        for r_, row in enumerate(heights):
+            for c_, hgt in enumerate(row):
+                bx, by = iso(c_ * 22, r_ * 22, 0, 392, 96, 1.0)
+                col = "#ff6b6b" if hgt >= 50 else a
+                w2 = 6.9  # half-width of the prism's top diamond
+                top = f"M0,{-hgt} l{w2},4 l-{w2},4 l-{w2},-4 Z"
+                left = f"M-{w2},{-hgt + 4} l{w2},4 v{hgt} l-{w2},-4 Z"
+                right = f"M{w2},{-hgt + 4} l-{w2},4 v{hgt} l{w2},-4 Z"
+                d = 1.8 + (r_ * 4 + c_) * 0.17
+                out.append(
+                    f'<g transform="translate({bx:.1f} {by + 8:.1f})"><g>'
+                    f'<animateTransform attributeName="transform" type="scale" values="1 0.55;1 1;1 0.75;1 0.55" dur="{d:.2f}s" repeatCount="indefinite"/>'
+                    f'<path d="{left}" fill="{col}" fill-opacity="0.55"/><path d="{right}" fill="{col}" fill-opacity="0.8"/>'
+                    f'<path d="{top}" fill="{col}"/></g></g>'
+                )
+        return "".join(out)
+    if kind == "iso_route":
+        out = []
+        S, O = 15, (398, 78)
+        for k in range(6):  # street grid on a tilted plane
+            x0, y0 = iso(k * S, 0, 0, *O)
+            x1, y1 = iso(k * S, 5 * S, 0, *O)
+            out.append(f'<line x1="{x0:.1f}" y1="{y0:.1f}" x2="{x1:.1f}" y2="{y1:.1f}" stroke="{a}" stroke-opacity="0.22"/>')
+            x0, y0 = iso(0, k * S, 0, *O)
+            x1, y1 = iso(5 * S, k * S, 0, *O)
+            out.append(f'<line x1="{x0:.1f}" y1="{y0:.1f}" x2="{x1:.1f}" y2="{y1:.1f}" stroke="{a}" stroke-opacity="0.22"/>')
+        for gx, gy, hgt in [(0, 0, 18), (3, 0, 26), (0, 3, 14), (3, 3, 20), (1.2, 1.2, 10)]:  # buildings
+            cx, cy = iso(gx * S + S / 2, gy * S + S / 2, 0, *O)
+            w2 = 8
+            out.append(
+                f'<g transform="translate({cx:.1f} {cy:.1f})" opacity="0.9">'
+                f'<path d="M-{w2},-{hgt} l{w2},4.6 v{hgt} l-{w2},-4.6 Z" fill="#2a3352"/>'
+                f'<path d="M{w2},-{hgt} l-{w2},4.6 v{hgt} l{w2},-4.6 Z" fill="#36416a"/>'
+                f'<path d="M0,-{hgt + 4.6} l{w2},4.6 l-{w2},4.6 l-{w2},-4.6 Z" fill="#46548a"/></g>'
+            )
+        route = [(0, 2), (2, 2), (2, 5), (5, 5)]
+        pts = [iso(x * S, y * S, 0, *O) for x, y in route]
+        d = "M" + " L".join(f"{x:.1f},{y:.1f}" for x, y in pts)
+        out.append(f'<path d="{d}" fill="none" stroke="{a}" stroke-width="3" stroke-linejoin="round" stroke-dasharray="3 5"/>')
+        for x, y in (pts[0], pts[-1]):
+            out.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="4.5" fill="{BG_A}" stroke="{a}" stroke-width="2.2"/>')
+        out.append(
+            f'<g><rect x="-6" y="-4" width="12" height="8" rx="2" fill="{b}"/>'
+            f'<animateMotion dur="5s" repeatCount="indefinite" path="{d}"/></g>'
+        )
+        return "".join(out)
     if kind == "bars":
         heights = [22, 26, 20, 28, 24, 30, 26, 70, 56, 30]
         out = []
@@ -428,10 +611,63 @@ def divider() -> str:
     return svg(w, h, body, "Heartbeat divider")
 
 
+ABOUT = [
+    ("#ff5c8a", "Most recently", "ML Engineer Intern at Aventusoft (2025–26): ECG deep learning for arrhythmia classification and PQRST detection, shipped to TensorFlow Lite and AWS SageMaker."),
+    ("#4c8dff", "Now building", "LLM observability (Spanscope), RAG over codebases (CodeAtlas), offline voice control (SayWatt) and reward-model evaluation."),
+    ("#2fe0a0", "Learning", "LLM inference and serving, Model Context Protocol, and event-driven systems at scale."),
+    ("#9085e9", "Ask me about", "ECG signals, medical imaging, RAG and search, LLM evaluation, and deploying models to cloud and edge."),
+    ("#ffb86b", "Fun fact", "From automating 120+ Salesforce test workflows to AI that detects heart conditions with 94% accuracy."),
+]
+ABOUT_INTRO = "I build production-minded AI systems: LLM and retrieval apps, evaluation and observability tools, and deep learning for medical signals."
+
+
+def _wrap(text, width):
+    words, lines, cur = text.split(), [], ""
+    for wd in words:
+        if len(cur) + len(wd) + 1 > width:
+            lines.append(cur)
+            cur = wd
+        else:
+            cur = f"{cur} {wd}".strip()
+    return lines + [cur]
+
+
+def about() -> str:
+    w = 1200
+    rows, y = [], 104
+    for color, label, text in ABOUT:
+        lines = _wrap(text, 84)
+        rows.append(f'<rect x="60" y="{y - 13}" width="10" height="10" rx="3" fill="{color}"/>')
+        rows.append(f'<text x="84" y="{y - 3}" font-size="15" font-weight="700" fill="{INK}">{escape(label)}</text>')
+        for k, line in enumerate(lines):
+            rows.append(f'<text x="220" y="{y - 3 + k * 21}" font-size="15" fill="{INK_2}">{escape(line)}</text>')
+        y += 21 * len(lines) + 16
+    h = max(y + 10, 380)
+    body = f"""
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="{BG_A}"/><stop offset="1" stop-color="{BG_B}"/></linearGradient>
+  <radialGradient id="heartGlow"><stop offset="0" stop-color="#ff5c8a" stop-opacity="0.35"/><stop offset="1" stop-color="#ff5c8a" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="{w}" height="{h}" rx="20" fill="url(#bg)"/>
+<rect x="0.5" y="0.5" width="{w - 1}" height="{h - 1}" rx="20" fill="none" stroke="#ffffff" stroke-opacity="0.08"/>
+<g font-family="{SANS}">
+  <text x="60" y="58" font-size="17" fill="{INK}">{escape(ABOUT_INTRO)}</text>
+  {"".join(rows)}
+</g>
+<g aria-hidden="true">
+  <circle cx="1060" cy="{h / 2:.0f}" r="105" fill="url(#heartGlow)">
+    <animate attributeName="r" values="95;120;95;95" dur="0.9s" repeatCount="indefinite"/>
+  </circle>
+  {spin_cloud(heart_points(170), 1060, h / 2 - 6, 92, "#ff5c8a", color2="#ffb0c6", dur=8, tilt=0.15, rmin=0.9, rmax=2.8, sway=0.9)}
+</g>"""
+    return svg(w, h, body, "About me: " + ABOUT_INTRO + " " + " ".join(f"{l}: {t}" for _, l, t in ABOUT))
+
+
 def main() -> None:
     OUT.mkdir(exist_ok=True)
     files = {
         "header.svg": header(),
+        "about.svg": about(),
         "typing.svg": typing(),
         "journey.svg": journey(),
         "divider.svg": divider(),
