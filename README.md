@@ -51,7 +51,7 @@ I build production-minded AI systems: retrieval and LLM applications, evaluation
     </td>
     <td width="50%" valign="top">
       <a href="https://prithvihl.github.io/voice/"><img src="assets/card-tinyml.svg" alt="SayWatt: offline voice commands for the home on an ESP32, no internet needed" width="100%"></a>
-      <p align="center"><a href="https://prithvihl.github.io/voice/"><b>▶ Live demo</b></a> · <a href="https://drive.google.com/drive/folders/1DJyjVCoRY8r977VBq4hr7fjYT17MtLwN?usp=sharing">Video</a> · <a href="https://github.com/PrithviHL/Real-Time-Voice-Command-Recognition-on-ESP32">Code</a></p>
+      <p align="center"><a href="https://prithvihl.github.io/voice/"><b>▶ Live demo</b></a> · <a href="https://drive.google.com/drive/folders/1DJyjVCoRY8r977VBq4hr7fjYT17MtLwN?usp=sharing">Video</a> · <a href="https://github.com/PrithviHL/SayWatt-Real-Time-Voice-Command-Recognition-on-ESP32">Code</a></p>
     </td>
   </tr>
 </table>
