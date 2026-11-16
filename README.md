@@ -14,8 +14,8 @@
 </p>
 
 <p align="center">
-  🎓 <b>M.S. Artificial Intelligence Systems, University of Florida (2026)</b><br>
-  🔎 Open to full-time <b>ML Engineer · AI Engineer · Software Engineer</b> roles · Gainesville, FL · open to relocation
+  <b>Prev ML Engineer @ Aventusoft // taught AI to catch missing heartbeats | MS AI @ UF | Prev SWE @ Huron // kept Salesforce from breaking | Next up: building products people can trust</b><br><br>
+  🔎 Open to full-time <b>ML Engineer · AI Engineer · Software Engineer</b> roles · open to relocation
 </p>
 
 <img src="assets/divider.svg" alt="" width="100%">
