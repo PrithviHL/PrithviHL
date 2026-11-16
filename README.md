@@ -76,7 +76,7 @@ I build production-minded AI systems: retrieval and LLM applications, evaluation
 
 ## 🧭 Journey
 
-<img src="assets/journey.svg" alt="Journey: B.E. Information Science, VTU (2019–2023); ML Engineer, YBI Foundation (2022–2023); Software Engineer in Test, Huron (2023–2024); M.S. AI Systems, University of Florida (2024–2026); AI/ML Engineer Intern, Aventusoft (2025–2026); open to full-time roles (2026)" width="100%">
+<img src="assets/journey.svg" alt="Journey: B.E. Information Science, VTU (2019–2023); ML Engineer Intern, YBI Foundation (2022–2023); Software Engineer in Test, Huron (2023–2024); M.S. AI Systems, University of Florida (2024–2026); AI/ML Engineer Intern, Aventusoft (2025–2026); open to full-time roles (2026)" width="100%">
 
 <details>
 <summary><b>💼 Experience, 🎓 education and 📜 certifications</b></summary>
@@ -86,7 +86,7 @@ I build production-minded AI systems: retrieval and LLM applications, evaluation
 
 - **AI/ML Engineer Intern**, Aventusoft Inc. · Aug 2025 – May 2026
 - **Software Engineer in Test**, Huron Consulting Group · Jun 2023 – Jun 2024
-- **Machine Learning Engineer**, YBI Foundation, Delhi · May 2022 – Jun 2023
+- **Machine Learning Engineer Intern**, YBI Foundation, Delhi · May 2022 – Jun 2023
 
 **Education**
 

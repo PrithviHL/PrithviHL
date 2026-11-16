@@ -77,7 +77,7 @@ CARDS = [
 
 JOURNEY = [
     ("2019 – 2023", "B.E. Information", "Science · VTU"),
-    ("2022 – 2023", "ML Engineer", "YBI Foundation"),
+    ("2022 – 2023", "ML Engineer Intern", "YBI Foundation"),
     ("2023 – 2024", "Engineer in Test", "Huron Consulting"),
     ("2024 – 2026", "M.S. AI Systems", "Univ. of Florida"),
     ("2025 – 2026", "AI/ML Engineer Intern", "Aventusoft"),
