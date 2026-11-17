@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <img src="assets/typing.svg" alt="Building LLM observability and evaluation tools. Shipping ECG deep learning to cloud and edge. Retrieval-augmented search over codebases. Turning ML research into production systems. Writing tested, maintainable software end to end." width="90%">
+  <img src="assets/typing.svg" alt="Building LeaveNow: real-time bus planning for Gainesville. Building LLM observability and evaluation tools. Shipping ECG deep learning to cloud and edge. Retrieval-augmented search over codebases. Turning ML research into production systems. Writing tested, maintainable software end to end." width="90%">
 </p>
 
 <p align="center">
@@ -23,7 +23,7 @@
 
 ## ⚡ About me
 
-<img src="assets/about.svg" alt="About me. I build production-minded AI systems: LLM and retrieval apps, evaluation and observability tools, and deep learning for medical signals. Most recently: ML Engineer Intern at Aventusoft (2025–26), ECG deep learning for arrhythmia classification and PQRST detection, shipped to TensorFlow Lite and AWS SageMaker. Now building: LLM observability (Spanscope), RAG over codebases (CodeAtlas), offline voice control (SayWatt) and reward-model evaluation. Learning: LLM inference and serving, Model Context Protocol, event-driven systems. Ask me about: ECG signals, medical imaging, RAG and search, LLM evaluation, deploying models to cloud and edge. Fun fact: from automating 120+ Salesforce test workflows to AI that detects heart conditions with 94% accuracy." width="100%">
+<img src="assets/about.svg" alt="About me. I build production-minded AI systems: LLM and retrieval apps, evaluation and observability tools, and deep learning for medical signals. Most recently: ML Engineer Intern at Aventusoft (2025–26), ECG deep learning for arrhythmia classification and PQRST detection, shipped to TensorFlow Lite and AWS SageMaker. Now building: LeaveNow, a real-time bus planner for Gainesville; LLM observability (Spanscope); RAG over codebases (CodeAtlas); and offline voice control (SayWatt). Learning: LLM inference and serving, Model Context Protocol, event-driven systems. Ask me about: ECG signals, medical imaging, RAG and search, LLM evaluation, deploying models to cloud and edge. Fun fact: from automating 120+ Salesforce test workflows to AI that detects heart conditions with 94% accuracy." width="100%">
 
 ## 🚀 Featured projects
 
@@ -41,11 +41,11 @@
   <tr>
     <td width="50%" valign="top">
       <a href="https://spanscope-llm-observability-dashboard.onrender.com/"><img src="assets/card-spanscope.svg" alt="Spanscope: live LLM observability from OpenTelemetry traces, load-tested at 52,700 spans per second into ClickHouse with none dropped" width="100%"></a>
-      <p align="center"><a href="https://spanscope-llm-observability-dashboard.onrender.com/"><b>▶ Live demo</b></a> · <a href="https://github.com/PrithviHL/Spanscope-LLM-observability-dashboard">Code</a></p>
+      <p align="center"><a href="https://spanscope-llm-observability-dashboard.onrender.com/"><b>▶ Live demo</b></a> · <a href="https://github.com/PrithviHL/Spanscope-LLM-observability-dashboard">Code</a> · <a href="https://github.com/PrithviHL/Spanscope-LLM-observability-dashboard#performance-and-accuracy">Evaluation</a></p>
     </td>
     <td width="50%" valign="top">
       <a href="https://prithvihl.github.io/voice/"><img src="assets/card-tinyml.svg" alt="SayWatt: offline voice control on a 5 dollar ESP32, 28 classes, 92 percent precise when it acts, no internet needed" width="100%"></a>
-      <p align="center"><a href="https://prithvihl.github.io/voice/"><b>▶ Live demo</b></a> · <a href="https://drive.google.com/drive/folders/1DJyjVCoRY8r977VBq4hr7fjYT17MtLwN?usp=sharing">Video</a> · <a href="https://github.com/PrithviHL/SayWatt-Real-Time-Voice-Command-Recognition-on-ESP32">Code</a></p>
+      <p align="center"><a href="https://prithvihl.github.io/voice/"><b>▶ Live demo</b></a> · <a href="https://drive.google.com/drive/folders/1DJyjVCoRY8r977VBq4hr7fjYT17MtLwN?usp=sharing">Video</a> · <a href="https://github.com/PrithviHL/SayWatt-Real-Time-Voice-Command-Recognition-on-ESP32">Code</a> · <a href="https://github.com/PrithviHL/SayWatt-Real-Time-Voice-Command-Recognition-on-ESP32#how-well-it-works">Evaluation</a></p>
     </td>
   </tr>
 </table>
@@ -74,6 +74,29 @@ The availability result is specific to one service-date sample; it is not routin
 The full web evidence pipeline scored **0.2596 MRR@10**, below the fixed-window lexical baseline. The 16.2% gain applies only to the AST + BM25 component, and exact-source recovery is not generated-answer accuracy. The hosted app uses hashed vectors; real semantic embeddings remain in the separate local engine.
 
 [Protocol, raw results, reproduction commands and limitations](https://github.com/PrithviHL/rag-over-codebase/blob/feature/render-public-app/code/ts/benchmarks/web-evaluation/README.md).
+
+### Spanscope — measured results
+
+| Metric | Measured result | Scope |
+|---|---|---|
+| Ingest into ClickHouse | **52,739 spans/s · 0 dropped** | 100 spans per request, 32 connections for 10 s; 616,313 accepted and 616,313 stored |
+| Ingest in memory | **436,223 spans/s · p99 14.1 ms** | Same load, one Node process on an Apple M4 Pro |
+| Storage | **~3.8× smaller than raw JSON** | ClickHouse compression on stored spans |
+| Toxicity evaluator | **F1 0.02 → 0.52 at 0.88 precision** | 860 human-labelled OffensEval 2019 test tweets, never used for tuning |
+
+Throughput is local and limited by one ClickHouse insert per request, so batch your exports. Faithfulness and PII are only measured on small AI-written sets so far, and the DeepEval / RAGAS judges have no benchmark numbers yet. [Methodology, reproduction commands and caveats](https://github.com/PrithviHL/Spanscope-LLM-observability-dashboard#performance-and-accuracy).
+
+### SayWatt — measured results
+
+| Metric | Measured result | Scope |
+|---|---|---|
+| Accuracy, all 28 classes | **74% (73.7%)** | 2,240 test clips from speakers not seen in training |
+| Precision when it acts | **92%** | Averaged windows at a 44% confidence threshold |
+| False triggers on background noise | **0%** | Same test clips, run through the WebAssembly build of the same model |
+| Firmware size | **461 KB flash (35%) · 31 KB RAM (9%)** | ESP32, `arduino-cli compile` |
+| Browser build | **119 KB WebAssembly · ~8 ms per word** | Live demo; audio never leaves the device |
+
+Unknown words still trigger a command 22.5% of the time, the weakest spot. The ~12 ms on-chip inference time is Edge Impulse's estimate and was not timed on the board. [Full results and limits](https://github.com/PrithviHL/SayWatt-Real-Time-Voice-Command-Recognition-on-ESP32#how-well-it-works).
 
 <details>
 <summary><b>🧪 More projects and research</b></summary>

@@ -26,6 +26,7 @@ SUBLINE = "M.S. Artificial Intelligence Systems  ·  University of Florida"
 STATUS = "OPEN TO FULL-TIME SWE & AI/ML ROLES"
 
 TYPING_LINES = [
+    "Building LeaveNow: real-time bus planning for Gainesville",
     "Building LLM observability & evaluation tools",
     "Shipping ECG deep learning to cloud and edge",
     "Retrieval-augmented search over codebases",
@@ -614,7 +615,7 @@ def divider() -> str:
 
 ABOUT = [
     ("#ff5c8a", "Most recently", "ML Engineer Intern at Aventusoft (2025–26): ECG deep learning for arrhythmia classification and PQRST detection, shipped to TensorFlow Lite and AWS SageMaker."),
-    ("#4c8dff", "Now building", "LLM observability (Spanscope), RAG over codebases (CodeAtlas), offline voice control (SayWatt) and reward-model evaluation."),
+    ("#4c8dff", "Now building", "LeaveNow, a real-time bus planner for Gainesville; LLM observability (Spanscope); RAG over codebases (CodeAtlas); and offline voice control (SayWatt)."),
     ("#2fe0a0", "Learning", "LLM inference and serving, Model Context Protocol, and event-driven systems at scale."),
     ("#9085e9", "Ask me about", "ECG signals, medical imaging, RAG and search, LLM evaluation, and deploying models to cloud and edge."),
     ("#ffb86b", "Fun fact", "From automating 120+ Salesforce test workflows to AI that detects heart conditions with 94% accuracy."),
