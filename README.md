@@ -30,8 +30,8 @@
 <table>
   <tr>
     <td width="50%" valign="top">
-      <a href="https://leavenow-prithvihl.onrender.com"><img src="assets/card-leavenow.svg" alt="LeaveNow: bus trip planner for Rochester RTS with live and scheduled times and one-transfer journeys" width="100%"></a>
-      <p align="center"><a href="https://leavenow-prithvihl.onrender.com"><b>▶ Live demo</b></a> · <a href="https://github.com/PrithviHL/LeaveNow-Real-Time-Bus-Location-Tracking-and-Smart-Departure-Prediction">Code</a></p>
+      <a href="https://leavenow-prithvihl.onrender.com"><img src="assets/card-leavenow.svg" alt="LeaveNow: Gainesville RTS planner across 972 stops; 3.1× sampled journey availability and 31.3 ms local routing p95" width="100%"></a>
+      <p align="center"><a href="https://leavenow-prithvihl.onrender.com"><b>▶ Live demo</b></a> · <a href="https://github.com/PrithviHL/LeaveNow-Real-Time-Bus-Location-Tracking-and-Smart-Departure-Prediction/tree/feature/streamlit-containers">Code</a> · <a href="https://github.com/PrithviHL/LeaveNow-Real-Time-Bus-Location-Tracking-and-Smart-Departure-Prediction/blob/feature/streamlit-containers/benchmarks/routing/README.md">Evaluation</a></p>
     </td>
     <td width="50%" valign="top">
       <a href="https://codeatlas-rag.onrender.com"><img src="assets/card-codeatlas.svg" alt="CodeAtlas: AST-aware codebase Q&A; 96.6% exact-source recovery on 291 parser-checked lookups" width="100%"></a>
@@ -51,6 +51,16 @@
 </table>
 
 <sub>Live demos run on free hosting and may take up to a minute to wake up.</sub>
+
+### LeaveNow — measured routing results
+
+| Metric | Measured result | Scope |
+|---|---|---|
+| Timetable scale | **27 routes · 972 stops · 3,321 trips** | GTFS trip definitions across service calendars, not daily trips |
+| Journey availability | **3.1× (16/60 → 49/60)** | Direct-only versus one-transfer routing on the same 60 sampled searches |
+| Routing latency | **7.4 ms median · 31.3 ms p95 locally** | Apple M4 Pro, Node 24; excludes HTTP, UI and live provider calls |
+
+The availability result is specific to one service-date sample; it is not routing accuracy or citywide coverage. [Methodology, raw results and reproduction commands](https://github.com/PrithviHL/LeaveNow-Real-Time-Bus-Location-Tracking-and-Smart-Departure-Prediction/blob/feature/streamlit-containers/benchmarks/routing/README.md).
 
 ### CodeAtlas — measured web results
 

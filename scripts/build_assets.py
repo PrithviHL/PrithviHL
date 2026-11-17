@@ -56,7 +56,7 @@ CARDS = [
     {
         "file": "card-leavenow.svg",
         "title": "LeaveNow",
-        "lines": ["Bus trip planner for Rochester", "RTS: live and scheduled times,", "journeys with one transfer."],
+        "lines": ["Gainesville RTS: 972 stops.", "3.1x sampled journey availability.", "31.3 ms local routing p95."],
         "chips": ["Python", "Streamlit", "GTFS", "Docker"],
         "pill": "LIVE DEMO",
         "accent": "#ff9f43",
