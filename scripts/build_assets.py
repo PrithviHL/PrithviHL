@@ -21,15 +21,16 @@ OUT = Path(__file__).resolve().parent.parent / "assets"
 # ---------------------------------------------------------------------------
 
 NAME = "Prithvi"
-TAGLINE = "AI/ML Engineer  ·  LLM Systems  ·  Medical AI"
+TAGLINE = "AI/ML Engineer  ·  Software Engineer  ·  LLM Systems"
 SUBLINE = "M.S. Artificial Intelligence Systems  ·  University of Florida"
-STATUS = "OPEN TO FULL-TIME ROLES"
+STATUS = "OPEN TO FULL-TIME ML & SWE ROLES"
 
 TYPING_LINES = [
     "Building LLM observability & evaluation tools",
     "Shipping ECG deep learning to cloud and edge",
     "Retrieval-augmented search over codebases",
     "Turning ML research into production systems",
+    "Writing tested, maintainable software end to end",
 ]
 
 CARDS = [
@@ -311,7 +312,7 @@ def header() -> str:
       </g>
       <g font-family="{MONO}" font-size="14.5">
         <text x="22" y="62" fill="{INK_3}">{{</text>
-        <text x="40" y="88"><tspan fill="#7fb2ff">"role"</tspan><tspan fill="{INK_3}">: </tspan><tspan fill="#7ff0c4">"AI/ML Engineer"</tspan><tspan fill="{INK_3}">,</tspan></text>
+        <text x="40" y="88"><tspan fill="#7fb2ff">"role"</tspan><tspan fill="{INK_3}">: </tspan><tspan fill="#7ff0c4">"AI/ML + SWE"</tspan><tspan fill="{INK_3}">,</tspan></text>
         <text x="40" y="112"><tspan fill="#7fb2ff">"focus"</tspan><tspan fill="{INK_3}">: [</tspan><tspan fill="#7ff0c4">"LLMs"</tspan><tspan fill="{INK_3}">, </tspan><tspan fill="#7ff0c4">"Med AI"</tspan><tspan fill="{INK_3}">],</tspan></text>
         <text x="40" y="136"><tspan fill="#7fb2ff">"live_apps"</tspan><tspan fill="{INK_3}">: </tspan><tspan fill="#ffb86b">4</tspan><tspan fill="{INK_3}">,</tspan></text>
         <text x="40" y="160"><tspan fill="#7fb2ff">"open_to_work"</tspan><tspan fill="{INK_3}">: </tspan><tspan fill="#b9a8ff">true</tspan></text>

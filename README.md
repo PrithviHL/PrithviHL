@@ -1,9 +1,9 @@
 <p align="center">
-  <img src="assets/header.svg" alt="Prithvi: AI/ML Engineer, LLM systems and medical AI. M.S. Artificial Intelligence Systems, University of Florida. Open to full-time roles." width="100%">
+  <img src="assets/header.svg" alt="Prithvi: AI/ML Engineer and Software Engineer, LLM systems. M.S. Artificial Intelligence Systems, University of Florida. Open to full-time ML and software engineering roles." width="100%">
 </p>
 
 <p align="center">
-  <img src="assets/typing.svg" alt="Building LLM observability and evaluation tools. Shipping ECG deep learning to cloud and edge. Retrieval-augmented search over codebases. Turning ML research into production systems." width="90%">
+  <img src="assets/typing.svg" alt="Building LLM observability and evaluation tools. Shipping ECG deep learning to cloud and edge. Retrieval-augmented search over codebases. Turning ML research into production systems. Writing tested, maintainable software end to end." width="90%">
 </p>
 
 <p align="center">
@@ -16,7 +16,7 @@
 
 <p align="center">
   <b>Prev ML Engineer @ Aventusoft // taught AI to catch missing heartbeats | MS AI @ UF | Prev SWE @ Huron // kept Salesforce from breaking | Next up: building products people can trust</b><br><br>
-  🔎 Open to full-time <b>ML Engineer · AI Engineer · Software Engineer</b> roles · open to relocation
+  🔎 Open to full-time <b>Software Engineer · ML Engineer · AI Engineer</b> roles · open to relocation
 </p>
 
 <img src="assets/divider.svg" alt="" width="100%">
