@@ -54,7 +54,7 @@ CARDS = [
         "art": "graph3d",
     },
     {
-        "file": "card-leavenow.svg",
+        "file": "card-leavenow-gainesville.svg",
         "title": "LeaveNow",
         "lines": ["Gainesville RTS: 972 stops.", "3.1x sampled journey availability.", "31.3 ms local routing p95."],
         "chips": ["Python", "Streamlit", "GTFS", "Docker"],

@@ -30,7 +30,7 @@
 <table>
   <tr>
     <td width="50%" valign="top">
-      <a href="https://leavenow-prithvihl.onrender.com"><img src="assets/card-leavenow.svg" alt="LeaveNow: Gainesville RTS planner across 972 stops; 3.1× sampled journey availability and 31.3 ms local routing p95" width="100%"></a>
+      <a href="https://leavenow-prithvihl.onrender.com"><img src="assets/card-leavenow-gainesville.svg" alt="LeaveNow: Gainesville RTS planner across 972 stops; 3.1× sampled journey availability and 31.3 ms local routing p95" width="100%"></a>
       <p align="center"><a href="https://leavenow-prithvihl.onrender.com"><b>▶ Live demo</b></a> · <a href="https://github.com/PrithviHL/LeaveNow-Real-Time-Bus-Location-Tracking-and-Smart-Departure-Prediction/tree/feature/streamlit-containers">Code</a> · <a href="https://github.com/PrithviHL/LeaveNow-Real-Time-Bus-Location-Tracking-and-Smart-Departure-Prediction/blob/feature/streamlit-containers/benchmarks/routing/README.md">Evaluation</a></p>
     </td>
     <td width="50%" valign="top">
