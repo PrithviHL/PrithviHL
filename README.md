@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/header.svg" alt="Prithvi: AI/ML Engineer and Software Engineer, LLM systems. M.S. Artificial Intelligence Systems, University of Florida. Open to full-time ML and software engineering roles." width="100%">
+  <img src="assets/header.svg" alt="Prithvi: Software Engineer and AI/ML Engineer, LLM systems. M.S. Artificial Intelligence Systems, University of Florida. Open to full-time software engineering and AI/ML roles." width="100%">
 </p>
 
 <p align="center">
@@ -16,7 +16,7 @@
 
 <p align="center">
   <b>Prev ML Engineer @ Aventusoft // taught AI to catch missing heartbeats | MS AI @ UF | Prev SWE @ Huron // kept Salesforce from breaking | Next up: building products people can trust</b><br><br>
-  🔎 Open to full-time <b>Software Engineer · ML Engineer · AI Engineer</b> roles · open to relocation
+  🔎 Open to full-time <b>Software Engineer · AI/ML Engineer</b> roles · open to relocation
 </p>
 
 <img src="assets/divider.svg" alt="" width="100%">

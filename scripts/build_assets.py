@@ -21,9 +21,9 @@ OUT = Path(__file__).resolve().parent.parent / "assets"
 # ---------------------------------------------------------------------------
 
 NAME = "Prithvi"
-TAGLINE = "AI/ML Engineer  ·  Software Engineer  ·  LLM Systems"
+TAGLINE = "Software Engineer  ·  AI/ML Engineer  ·  LLM Systems"
 SUBLINE = "M.S. Artificial Intelligence Systems  ·  University of Florida"
-STATUS = "OPEN TO FULL-TIME ML & SWE ROLES"
+STATUS = "OPEN TO FULL-TIME SWE & AI/ML ROLES"
 
 TYPING_LINES = [
     "Building LLM observability & evaluation tools",
@@ -82,7 +82,7 @@ JOURNEY = [
     ("2023 – 2024", "Engineer in Test", "Huron Consulting"),
     ("2024 – 2026", "M.S. AI Systems", "Univ. of Florida"),
     ("2025 – 2026", "AI/ML Engineer Intern", "Aventusoft"),
-    ("2026 →", "Open to full-time", "ML / AI / SWE roles"),
+    ("2026 →", "Open to full-time", "SWE & AI/ML roles"),
 ]
 
 # ---------------------------------------------------------------------------
@@ -312,7 +312,7 @@ def header() -> str:
       </g>
       <g font-family="{MONO}" font-size="14.5">
         <text x="22" y="62" fill="{INK_3}">{{</text>
-        <text x="40" y="88"><tspan fill="#7fb2ff">"role"</tspan><tspan fill="{INK_3}">: </tspan><tspan fill="#7ff0c4">"AI/ML + SWE"</tspan><tspan fill="{INK_3}">,</tspan></text>
+        <text x="40" y="88"><tspan fill="#7fb2ff">"role"</tspan><tspan fill="{INK_3}">: </tspan><tspan fill="#7ff0c4">"SWE + AI/ML"</tspan><tspan fill="{INK_3}">,</tspan></text>
         <text x="40" y="112"><tspan fill="#7fb2ff">"focus"</tspan><tspan fill="{INK_3}">: [</tspan><tspan fill="#7ff0c4">"LLMs"</tspan><tspan fill="{INK_3}">, </tspan><tspan fill="#7ff0c4">"Med AI"</tspan><tspan fill="{INK_3}">],</tspan></text>
         <text x="40" y="136"><tspan fill="#7fb2ff">"live_apps"</tspan><tspan fill="{INK_3}">: </tspan><tspan fill="#ffb86b">4</tspan><tspan fill="{INK_3}">,</tspan></text>
         <text x="40" y="160"><tspan fill="#7fb2ff">"open_to_work"</tspan><tspan fill="{INK_3}">: </tspan><tspan fill="#b9a8ff">true</tspan></text>
