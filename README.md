@@ -34,8 +34,8 @@
       <p align="center"><a href="https://leavenow-prithvihl.onrender.com"><b>▶ Live demo</b></a> · <a href="https://github.com/PrithviHL/LeaveNow-Real-Time-Bus-Location-Tracking-and-Smart-Departure-Prediction">Code</a></p>
     </td>
     <td width="50%" valign="top">
-      <a href="https://codeatlas-rag.onrender.com"><img src="assets/card-codeatlas.svg" alt="CodeAtlas: ask questions about any public GitHub repo, with answers citing commit-pinned source" width="100%"></a>
-      <p align="center"><a href="https://codeatlas-rag.onrender.com"><b>▶ Live demo</b></a> · <a href="https://github.com/PrithviHL/rag-over-codebase">Code</a></p>
+      <a href="https://codeatlas-rag.onrender.com"><img src="assets/card-codeatlas.svg" alt="CodeAtlas: AST-aware codebase Q&A; 96.6% exact-source recovery on 291 parser-checked lookups" width="100%"></a>
+      <p align="center"><a href="https://codeatlas-rag.onrender.com"><b>▶ Live demo</b></a> · <a href="https://github.com/PrithviHL/rag-over-codebase/tree/feature/render-public-app">Code</a> · <a href="https://github.com/PrithviHL/rag-over-codebase/blob/feature/render-public-app/code/ts/benchmarks/web-evaluation/README.md">Evaluation</a></p>
     </td>
   </tr>
   <tr>
@@ -52,13 +52,26 @@
 
 <sub>Live demos run on free hosting and may take up to a minute to wake up.</sub>
 
+### CodeAtlas — measured web results
+
+| Metric | Measured result | Scope |
+|---|---|---|
+| Exact-source recovery | **96.6% (281/291)** | Body and line-span agreement with separate Python / TypeScript parsers on Flask, Hono and Express snapshots |
+| AST + BM25 lexical MRR@10 | **0.3927 → 0.4565 (+16.2%)** | 5,000 CodeSearchNet-derived queries, five languages, 1,000 candidates per language; component ablation |
+| Retrieval / evidence-selection p95 | **3.59 ms locally** | Excludes HTTP, network and LLM generation |
+| Automated checks | **53 web + 10 engine tests passed** | Functional checks; not answer-quality scores |
+
+The full web evidence pipeline scored **0.2596 MRR@10**, below the fixed-window lexical baseline. The 16.2% gain applies only to the AST + BM25 component, and exact-source recovery is not generated-answer accuracy. The hosted app uses hashed vectors; real semantic embeddings remain in the separate local engine.
+
+[Protocol, raw results, reproduction commands and limitations](https://github.com/PrithviHL/rag-over-codebase/blob/feature/render-public-app/code/ts/benchmarks/web-evaluation/README.md).
+
 <details>
 <summary><b>🧪 More projects and research</b></summary>
 <br>
 
 | Project | What it does | Stack |
 |---|---|---|
-| **Cross-Repository Semantic Code Search** | Hybrid retrieval over multiple codebases: Neo4j code knowledge graph, BM25F + dense retrieval, cross-encoder reranking. **MRR@10: 0.61 → 0.83** | Python, Neo4j, Transformers, FastAPI |
+| **[CodeAtlas local semantic engine](https://github.com/PrithviHL/rag-over-codebase/blob/feature/render-public-app/engine/README.md)** | Separate experimental LangGraph engine with real embeddings, Qdrant and incremental webhooks. Development pilot: 12,027 indexed lines, 2 repos, 20 assistant-authored queries; fusion MRR@10 **0.1991**. Not connected to the hosted demo. | Python, LangGraph, Qdrant, Transformers, FastAPI |
 | **BeatNet ECG Pipeline** | UF IPPD sponsored project with Aventusoft: fiducial detection and arrhythmia classification on single-lead 30 s ECG | PyTorch, 1D U-Net, ECG-FM, MIT-BIH |
 | **Multi-Image MRI Super-Resolution** | Residual CNN with attention for MRI super-resolution (**PSNR 25.15 dB, SSIM 0.70**) with a Gradio demo | PyTorch, Gradio, HiPerGator |
 | **Multimodal Medical VQA** | Three image–text fusion architectures on VQA-RAD; Adaptive Modality Weighting lifts accuracy **60.82% → 62.41%**; IEEE-format paper | PyTorch, Transformers |

@@ -46,8 +46,8 @@ CARDS = [
     {
         "file": "card-codeatlas.svg",
         "title": "CodeAtlas",
-        "lines": ["Ask questions about any public", "GitHub repo; answers cite", "commit-pinned source code."],
-        "chips": ["TypeScript", "RAG", "LangGraph", "Qdrant"],
+        "lines": ["AST-aware codebase Q&A.", "96.6% exact-source recovery", "291 parser-checked lookups."],
+        "chips": ["TypeScript", "Tree-sitter", "Groq"],
         "pill": "LIVE DEMO",
         "accent": "#19c48a",
         "accent2": "#4c8dff",
