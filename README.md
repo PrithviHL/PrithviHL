@@ -30,8 +30,8 @@
 <table>
   <tr>
     <td width="50%" valign="top">
-      <a href="https://leavenow-prithvihl.onrender.com"><img src="assets/card-leavenow-gainesville.svg" alt="LeaveNow: Gainesville RTS planner across 972 stops with local OpenStreetMap walking routes" width="100%"></a>
-      <p align="center"><a href="https://leavenow-prithvihl.onrender.com"><b>▶ Live demo</b></a> · <a href="https://github.com/PrithviHL/LeaveNow-Real-Time-Bus-Location-Tracking-and-Smart-Departure-Prediction/tree/feature/streamlit-containers">Code</a> · <a href="https://github.com/PrithviHL/LeaveNow-Real-Time-Bus-Location-Tracking-and-Smart-Departure-Prediction/blob/feature/streamlit-containers/benchmarks/routing/README.md">Evaluation</a></p>
+      <a href="https://leavenow-prithvihl.onrender.com"><img src="assets/card-leavenow-gainesville.svg" alt="LeaveNow: 972 Gainesville RTS stops, 127 automated tests passed, OSM walking and exact-trip tracking" width="100%"></a>
+      <p align="center"><a href="https://leavenow-prithvihl.onrender.com"><b>▶ Live demo</b></a> · <a href="https://github.com/PrithviHL/LeaveNow-Real-Time-Bus-Location-Tracking-and-Smart-Departure-Prediction/tree/feature/streamlit-containers">Code</a> · <a href="https://github.com/PrithviHL/LeaveNow-Real-Time-Bus-Location-Tracking-and-Smart-Departure-Prediction/blob/feature/streamlit-containers/docs/project-metrics.md">Evaluation</a></p>
     </td>
     <td width="50%" valign="top">
       <a href="https://codeatlas-rag.onrender.com"><img src="assets/card-codeatlas.svg" alt="CodeAtlas: AST-aware codebase Q&A; 96.6% exact-source recovery on 291 parser-checked lookups" width="100%"></a>
@@ -52,7 +52,19 @@
 
 <sub>Live demos run on free hosting and may take up to a minute to wake up.</sub>
 
-### LeaveNow — measured routing results
+### LeaveNow — current verification (November 18, 2026)
+
+| Metric | Result | Scope |
+|---|---:|---|
+| Automated tests | **127 passed** | 77 Node + 50 Python; both CI workflows passed |
+| Walking oracle | **1,296 pairs** | Generated directed/stair/crossing routes checked against Dijkstra |
+| Robustness cases | **128 evidence combinations · 600 delay scenarios** | Calculation and transfer-feasibility checks |
+| Current-policy feed sample | **120 searches · 2,428 candidates** | One service date, not observed passenger trips |
+| Timing invariants | **0 failures** | Includes 31 transfer candidates and 4,887 walking-leg instances |
+
+Exact-trip tracking, verified live destination ETAs, OSM walks, a zero-buffer exception at the boarding stop, and pan/zoom preservation are deployed. Real-world bus-arrival MAE and measured pedestrian accuracy remain unmeasured. [Canonical evidence and version history](https://github.com/PrithviHL/LeaveNow-Real-Time-Bus-Location-Tracking-and-Smart-Departure-Prediction/blob/feature/streamlit-containers/docs/project-metrics.md) · [Saved JSON snapshot](metrics/leavenow.json).
+
+### LeaveNow — historical pre-OSM routing results
 
 | Metric | Measured result | Scope |
 |---|---|---|

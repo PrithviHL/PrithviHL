@@ -58,7 +58,7 @@ CARDS = [
     {
         "file": "card-leavenow-gainesville.svg",
         "title": "LeaveNow",
-        "lines": ["Gainesville RTS: 972 stops.", "3.1x sampled journey availability.", "31.3 ms local routing p95."],
+        "lines": ["Gainesville RTS: 972 stops.", "127 automated tests passed.", "OSM walks + exact-trip tracking."],
         "chips": ["Python", "Streamlit", "GTFS", "Docker"],
         "pill": "LIVE DEMO",
         "accent": "#ff9f43",
