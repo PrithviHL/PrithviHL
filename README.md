@@ -11,7 +11,7 @@
   <a href="https://www.linkedin.com/in/prithvihl/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
   <a href="mailto:prithvihlnew@gmail.com"><img src="https://img.shields.io/badge/Email-1f2937?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"></a>
   <a href="https://instagram.com/prithvi_gowda_001"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram"></a>
-  <a href="https://spanscope-llm-observability-dashboard.onrender.com/"><img src="https://img.shields.io/badge/Live_demos-4-2fe0a0?style=for-the-badge&logo=render&logoColor=white" alt="4 live demos"></a>
+  <a href="https://spanscope-llm-observability-dashboard.onrender.com/"><img src="https://img.shields.io/badge/Live_demos-5-2fe0a0?style=for-the-badge&logo=render&logoColor=white" alt="5 live demos"></a>
 </p>
 
 <p align="center">
@@ -47,6 +47,13 @@
       <a href="https://prithvihl.github.io/voice/"><img src="assets/card-tinyml.svg" alt="SayWatt: offline voice control on a 5 dollar ESP32, 28 classes, 92 percent precise when it acts, no internet needed" width="100%"></a>
       <p align="center"><a href="https://prithvihl.github.io/voice/"><b>▶ Live demo</b></a> · <a href="https://drive.google.com/drive/folders/1DJyjVCoRY8r977VBq4hr7fjYT17MtLwN?usp=sharing">Video</a> · <a href="https://github.com/PrithviHL/SayWatt-Real-Time-Voice-Command-Recognition-on-ESP32">Code</a> · <a href="https://github.com/PrithviHL/SayWatt-Real-Time-Voice-Command-Recognition-on-ESP32#how-well-it-works">Evaluation</a></p>
     </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <a href="https://rolecraft-atr5.onrender.com/"><img src="assets/card-rolecraft.svg" alt="RoleCraft: local AI workflow for tailoring resumes and drafting personalized outreach" width="100%"></a>
+      <p align="center"><a href="https://rolecraft-atr5.onrender.com/"><b>▶ Live demo</b></a> · <a href="https://github.com/PrithviHL/rolecraft">Code</a></p>
+    </td>
+    <td width="50%" valign="top"></td>
   </tr>
 </table>
 

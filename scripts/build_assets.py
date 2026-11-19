@@ -75,6 +75,16 @@ CARDS = [
         "accent2": "#9085e9",
         "art": "ring3d",
     },
+    {
+        "file": "card-rolecraft.svg",
+        "title": "RoleCraft",
+        "lines": ["Tailor a resume to a job", "description and draft personal", "outreach with a local LLM."],
+        "chips": ["n8n", "Ollama", "JavaScript", "Docker"],
+        "pill": "LIVE DEMO",
+        "accent": "#32c9a4",
+        "accent2": "#4c8dff",
+        "art": "graph3d",
+    },
 ]
 
 JOURNEY = [
