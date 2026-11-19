@@ -78,7 +78,7 @@ CARDS = [
     {
         "file": "card-rolecraft.svg",
         "title": "RoleCraft",
-        "lines": ["Tailor a resume to a job", "description and draft personal", "outreach with a local LLM."],
+        "lines": ["Tailor a Word resume locally.", "Keep the original formatting.", "Download a DOCX + drafts ZIP."],
         "chips": ["n8n", "Ollama", "JavaScript", "Docker"],
         "pill": "LIVE DEMO",
         "accent": "#32c9a4",

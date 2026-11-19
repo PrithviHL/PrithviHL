@@ -50,7 +50,7 @@
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <a href="https://rolecraft-atr5.onrender.com/"><img src="assets/card-rolecraft.svg" alt="RoleCraft: local AI workflow for tailoring resumes and drafting personalized outreach" width="100%"></a>
+      <a href="https://rolecraft-atr5.onrender.com/"><img src="assets/card-rolecraft.svg" alt="RoleCraft: DOCX-only resume tailoring that preserves Word formatting and returns the resume, outreach drafts, and review notes in one ZIP" width="100%"></a>
       <p align="center"><a href="https://rolecraft-atr5.onrender.com/"><b>▶ Live demo</b></a> · <a href="https://github.com/PrithviHL/rolecraft">Code</a></p>
     </td>
     <td width="50%" valign="top"></td>
